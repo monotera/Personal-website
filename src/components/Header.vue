@@ -34,13 +34,12 @@ export default {
 
 <style lang="scss" scoped>
 .header-wrapper {
-  background-color: transparent;
+  background-color: black;
   color: white;
   position: fixed;
   top: 0;
   z-index: 3;
   width: 100%;
-  border-bottom: 1px solid white;
 }
 a {
   cursor: pointer;
@@ -56,6 +55,10 @@ a {
   min-height: 10vh;
   padding: 2rem;
   width: 90%;
+  @media screen and (max-width: $breakpoint-desktop) {
+    text-align: center;
+    padding: 2rem 0;
+  }
 }
 
 .header-wrapper-ul {
@@ -68,11 +71,14 @@ a {
 }
 
 .active {
-  color: orange;
+  color: $page-main-color;
 }
 
 .logo {
   flex: 2 1 40rem;
   font-family: $logo-font, sans-serif;
+  @media screen and (max-width: $breakpoint-desktop) {
+    margin-bottom: 1rem;
+  }
 }
 </style>

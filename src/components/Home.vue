@@ -35,7 +35,7 @@ export default {};
     align-items: center;
   }
   .info {
-    color: orange;
+    color: $page-main-color;
     text-align: center;
   }
   .title {
@@ -51,7 +51,7 @@ export default {};
     }
   }
   .point {
-    background-color: orange;
+    background-color: $page-main-color;
     width: 1em;
     height: 1em;
     border-radius: 50%;
