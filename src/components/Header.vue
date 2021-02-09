@@ -4,13 +4,25 @@
       <h1 id="logo" class="logo">Nelson Mosquera</h1>
       <ul class="header-wrapper-ul">
         <li>
-          <a @click="activate(1)" :class="{ active: active_el == 1 }">Home</a>
+          <a
+            @click="activate(1), scrollAnimation('#home')"
+            :class="{ active: active_el == 1 }"
+            >Home</a
+          >
         </li>
         <li>
-          <a @click="activate(2)" :class="{ active: active_el == 2 }">Information</a>
+          <a
+            @click="activate(2), scrollAnimation('#info')"
+            :class="{ active: active_el == 2 }"
+            >Information</a
+          >
         </li>
         <li>
-          <a @click="activate(3)" :class="{ active: active_el == 3 }">Contact</a>
+          <a
+            @click="activate(3), scrollAnimation('#contact-component')"
+            :class="{ active: active_el == 3 }"
+            >Contact</a
+          >
         </li>
       </ul>
     </nav>
@@ -28,6 +40,11 @@ export default {
     activate(el) {
       this.active_el = el;
     },
+    scrollAnimation(section) {
+      document.querySelector(section).scrollIntoView({
+        behavior: "smooth",
+      });
+    },
   },
 };
 </script>
@@ -36,7 +53,7 @@ export default {
 .header-wrapper {
   background-color: black;
   color: white;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 3;
   width: 100%;
