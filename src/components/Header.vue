@@ -64,7 +64,7 @@ export default {
 a {
   cursor: pointer;
   &:hover {
-    color: orange;
+    color: $main-links-color;
   }
 }
 .header-wrapper-nav {
@@ -91,7 +91,7 @@ a {
 }
 
 .active {
-  color: $page-main-color;
+  color: $main-links-color;
 }
 
 .logo {
