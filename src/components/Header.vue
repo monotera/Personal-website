@@ -57,6 +57,9 @@ export default {
   top: 0;
   z-index: 3;
   width: 100%;
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 1.1rem;
+  }
 }
 a {
   cursor: pointer;

@@ -138,9 +138,10 @@ export default {
       }
     }
     i {
-      padding: 0 1rem;
+      padding-top: 1rem;
       @media screen and (min-width: $breakpoint-desktop) {
         align-self: center;
+        padding: 0 1rem;
       }
     }
   }
