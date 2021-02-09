@@ -20,7 +20,7 @@ export default {};
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), transparent),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
     url("../assets/background.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,12 +28,14 @@ export default {};
   height: 100vh;
   color: white;
   font-family: $home-main-font;
+
   .subtitle {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .info {
+    color: orange;
     text-align: center;
   }
   .title {
@@ -49,7 +51,7 @@ export default {};
     }
   }
   .point {
-    background-color: white;
+    background-color: orange;
     width: 1em;
     height: 1em;
     border-radius: 50%;
