@@ -13,7 +13,7 @@ export const store = new Vuex.Store({
     },
   },
   getters: {
-    getDarko_mode(state) {
+    getDark_mode(state) {
       return state.dark_mode;
     },
   },

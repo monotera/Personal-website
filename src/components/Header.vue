@@ -6,21 +6,33 @@
         <li>
           <a
             @click="activate(1), scrollAnimation('#home')"
-            :class="{ active: active_el == 1 }"
+            :class="[
+              dark_mode ? 'dark_mode' : 'ligth_mode',
+              { 'active-dark': active_el == 1 && dark_mode },
+              { 'active-light': active_el == 1 && !dark_mode },
+            ]"
             >Home</a
           >
         </li>
         <li>
           <a
             @click="activate(2), scrollAnimation('#info')"
-            :class="{ active: active_el == 2 }"
+            :class="[
+              dark_mode ? 'dark_mode' : 'ligth_mode',
+              { 'active-dark': active_el == 2 && dark_mode },
+              { 'active-light': active_el == 2 && !dark_mode },
+            ]"
             >Information</a
           >
         </li>
         <li>
           <a
             @click="activate(3), scrollAnimation('#contact-component')"
-            :class="{ active: active_el == 3 }"
+            :class="[
+              dark_mode ? 'dark_mode' : 'ligth_mode',
+              { 'active-dark': active_el == 3 && dark_mode },
+              { 'active-light': active_el == 3 && !dark_mode },
+            ]"
             >Contact</a
           >
         </li>
@@ -32,6 +44,8 @@
 
 <script>
 import Toggle from "./Toggle";
+import "@mdi/font/css/materialdesignicons.css";
+
 export default {
   components: { Toggle },
   data() {
@@ -48,8 +62,10 @@ export default {
         behavior: "smooth",
       });
     },
-    changeDark_mode() {
-      console.log("sad");
+  },
+  computed: {
+    dark_mode: function () {
+      return this.$store.getters.getDark_mode;
     },
   },
 };
@@ -67,10 +83,16 @@ export default {
     font-size: 1.1rem;
   }
 }
-a {
+.ligth_mode {
   cursor: pointer;
   &:hover {
     color: $main-links-color;
+  }
+}
+.dark_mode {
+  cursor: pointer;
+  &:hover {
+    color: $main-links-dark-color;
   }
 }
 
@@ -97,10 +119,12 @@ a {
   font-family: $nav-font;
 }
 
-.active {
+.active-dark {
+  color: $main-links-dark-color;
+}
+.active-light {
   color: $main-links-color;
 }
-
 .logo {
   flex: 2 1 40rem;
   font-family: $logo-font, sans-serif;

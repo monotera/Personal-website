@@ -1,6 +1,6 @@
 <template>
   <label class="switch">
-    <input type="checkbox" />
+    <input @click="changeMode()" type="checkbox" />
     <div>
       <span></span>
     </div>
@@ -8,7 +8,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    changeMode() {
+      this.$store.commit("changeMode");
+      this.dark_mode = this.$store.getters.getDark_mode;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
