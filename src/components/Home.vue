@@ -11,7 +11,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, esse! Quos, a.<br />
         Omnis, quibusdam reprehenderit vero, ipsa a quas vitae corrupti et assumenda<br />
       </p>
-      <button>Click me!</button>
+      <button class="home-btn">Click me!</button>
     </div>
   </div>
 </template>
@@ -75,7 +75,7 @@ export default {};
     }
   }
 
-  button {
+  .home-btn {
     background-color: lightseagreen;
     border: 3px solid $main-font-color;
     color: $main-font-color;
