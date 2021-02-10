@@ -1,12 +1,17 @@
 <template>
   <div id="home">
     <div class="info">
-      <p class="title">Nelson Alejandro Mosquera <br />Barrera</p>
+      <h1 class="title">Nelson Alejandro Mosquera <br />Barrera</h1>
       <div class="subtitle">
         <div class="point"></div>
-        <p class="subtitle-text">Sotware Developer</p>
+        <h2 class="subtitle-text">Sotware Developer</h2>
         <div class="point"></div>
       </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, esse! Quos, a.<br />
+        Omnis, quibusdam reprehenderit vero, ipsa a quas vitae corrupti et assumenda<br />
+      </p>
+      <button class="home-btn">Click me!</button>
     </div>
   </div>
 </template>
@@ -20,11 +25,11 @@ export default {};
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url("../assets/background.jpeg");
+  background-image: url("../assets/b.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
   height: 100vh;
   color: white;
   font-family: $home-main-font;
@@ -39,15 +44,23 @@ export default {};
     text-align: center;
   }
   .title {
-    font-size: 3rem;
+    font-size: 4rem;
     @media screen and (max-width: $breakpoint-desktop) {
       font-size: 2rem;
     }
   }
   .subtitle-text {
-    font-size: 2rem;
+    font-size: 2.5rem;
+
     @media screen and (max-width: $breakpoint-desktop) {
       font-size: 1rem;
+    }
+  }
+  p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    @media screen and (max-width: $breakpoint-desktop) {
+      font-size: 0.7rem;
     }
   }
   .point {
@@ -59,6 +72,30 @@ export default {};
     margin: 0 1rem;
     @media screen and (max-width: $breakpoint-desktop) {
       font-size: 0.5rem;
+    }
+  }
+
+  .home-btn {
+    background-color: lightseagreen;
+    border: 3px solid $main-font-color;
+    color: $main-font-color;
+    cursor: pointer;
+    font-family: $contact-text-font;
+    font-size: 0.8rem;
+    margin: 1rem;
+    padding: 0.5rem 2rem;
+    transition: 0.5s;
+    border-radius: 5rem;
+    width: 40%;
+    &:hover {
+      background-color: $secondary-background-color;
+      color: lightseagreen;
+    }
+    @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+      font-size: 1rem;
+    }
+    @media screen and (min-width: $breakpoint-desktop) {
+      font-size: 1.2rem;
     }
   }
 }

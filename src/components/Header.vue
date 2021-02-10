@@ -24,13 +24,16 @@
             >Contact</a
           >
         </li>
+        <li><Toggle class="toggle" /></li>
       </ul>
     </nav>
   </header>
 </template>
 
 <script>
+import Toggle from "./Toggle";
 export default {
+  components: { Toggle },
   data() {
     return {
       active_el: 1,
@@ -44,6 +47,9 @@ export default {
       document.querySelector(section).scrollIntoView({
         behavior: "smooth",
       });
+    },
+    changeDark_mode() {
+      console.log("sad");
     },
   },
 };
@@ -64,9 +70,10 @@ export default {
 a {
   cursor: pointer;
   &:hover {
-    color: orange;
+    color: $main-links-color;
   }
 }
+
 .header-wrapper-nav {
   align-items: center;
   display: flex;
@@ -91,7 +98,7 @@ a {
 }
 
 .active {
-  color: $page-main-color;
+  color: $main-links-color;
 }
 
 .logo {
