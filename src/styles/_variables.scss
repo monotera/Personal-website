@@ -5,14 +5,17 @@ $breakpoint-tablet: 769px;
 $breakpoint-columns: 578px;
 $breakpoint-desktopSmall: 975px;
 
-
 $page-main-color: white;
+$page-main-color-dark: orange;
 $main-links-color: lightseagreen;
 $main-links-dark-color: orange;
-$dark-theme-background2: #181818;
+$main-btn-color: lightseagreen;
+$main-btn-color-dark: orange;
+$main-btn-border-color: black;
 $main-font-color: #fff;
-$dark-theme-surface: #282828;
 $main-background-color: #000;
+$dark-theme-background2: #181818;
+$dark-theme-surface: #282828;
 $secondary-background-color: #fff;
 $secondary-font-color: #000;
 
@@ -25,4 +28,3 @@ $contact-text-font: "fontMontserratSemiBold", sans-serif;
 $footer-main-font: "fontMontserratRegular", sans-serif;
 $footer-title-font: "fontMontserratBold", sans-serif;
 $footer-copyRigth-font: "fontMontserratSemiBold", sans-serif;
-

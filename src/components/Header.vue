@@ -72,9 +72,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+//General style's
 .header-wrapper {
-  background-color: black;
-  color: white;
+  background-color: $main-background-color;
+  color: $page-main-color;
   position: sticky;
   top: 0;
   z-index: 3;
@@ -83,6 +84,8 @@ export default {
     font-size: 1.1rem;
   }
 }
+
+//Dark and light mode style's
 .ligth_mode {
   cursor: pointer;
   &:hover {
@@ -109,7 +112,7 @@ export default {
     padding: 2rem 0;
   }
 }
-
+// Component style
 .header-wrapper-ul {
   align-items: center;
   display: flex;
