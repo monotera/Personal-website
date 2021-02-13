@@ -4,7 +4,6 @@
       <v-row>
         <v-col :cols="length">
           <v-text-field
-            dark
             filled
             :label="message"
             :height="heigth"

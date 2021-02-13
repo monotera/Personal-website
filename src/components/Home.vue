@@ -13,7 +13,7 @@
           :class="[dark_mode ? 'des-dark-mode' : 'des-light-mode']"
           class="subtitle-text"
         >
-          Sotware Developer
+          Software Developer
         </h2>
         <div
           class="point"
@@ -21,8 +21,10 @@
         ></div>
       </div>
       <p :class="[dark_mode ? 'des-dark-mode' : 'des-light-mode']">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, esse! Quos, a.<br />
-        Omnis, quibusdam reprehenderit vero, ipsa a quas vitae corrupti et assumenda<br />
+        welcome to my personal website! With this page my goal is to show you a bit of
+        my<br />
+        life and my personal projects. if you like what you see you can scroll to the<br />
+        contact section and contact me! <br />
       </p>
       <button :class="[dark_mode ? 'btn-dark-mode' : 'btn-light-mode']" class="home-btn">
         Click me!
@@ -33,6 +35,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      status: "Light",
+    };
+  },
   computed: {
     dark_mode: function () {
       return this.$store.getters.getDark_mode;
@@ -50,7 +57,6 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
   height: 100vh;
   font-family: $home-main-font;
 }
@@ -58,9 +64,11 @@ export default {
 //Dark and light mode styles
 .light-mode {
   background-image: url("../assets/background-light.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
 }
 .dark-mode {
   background-image: url("../assets/background-dark.jpeg");
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
 }
 .point-light-mode {
   background-color: $page-main-color;
@@ -122,6 +130,7 @@ p {
   @media screen and (max-width: $breakpoint-desktop) {
     font-size: 0.7rem;
     padding: 1rem;
+    margin-top: 0;
   }
 }
 .point {
