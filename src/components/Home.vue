@@ -21,10 +21,11 @@
         ></div>
       </div>
       <p :class="[dark_mode ? 'des-dark-mode' : 'des-light-mode']">
-        welcome to my personal website! With this page my goal is to show you a bit of
-        my<br />
-        life and my personal projects. if you like what you see you can scroll to the<br />
-        contact section and contact me! <br />
+        Welcome to my personal website! <br />
+        With this page my goal is to show you a bit of my life and my personal projects.
+        <br />
+        If you like what you see you can scroll to the contact section and contact me!
+        <br />
       </p>
       <button :class="[dark_mode ? 'btn-dark-mode' : 'btn-light-mode']" class="home-btn">
         Click me!

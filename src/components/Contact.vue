@@ -22,14 +22,19 @@
     <div class="question-section">
       <h1 class="contact-tittle">ANY QUESTIONS?</h1>
       <form class="questions-main-section">
-        <p class="question-title">Nombre *</p>
-        <textField :length="12" :message="'Name'" :heigth="'1rem'" />
+        <p class="question-title">Name *</p>
+        <textField :length="12" :message="'Hi! ...'" :heigth="'1rem'" />
         <p class="question-title">Email *</p>
-        <textField :length="12" :message="'Email'" :heigth="'1rem'" :rule="emailRules" />
-        <p class="question-title">Mensaje *</p>
         <textField
           :length="12"
-          :message="'Message'"
+          :message="'Email goes here!'"
+          :heigth="'1rem'"
+          :rule="emailRules"
+        />
+        <p class="question-title">Message *</p>
+        <textField
+          :length="12"
+          :message="'Tell me your question!'"
           :heigth="'10rem'"
           :rule="messageRules"
         />

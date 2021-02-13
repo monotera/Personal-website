@@ -20,12 +20,12 @@
             class="footer-whatsAppLink"
             href="https://api.whatsapp.com/send?phone=+57%20300%20848%201578&text=Hello%20I%20would%20like%20to%20contact%20you"
           >
-            Click aquí
+            click here
           </a>
         </p>
       </div>
       <div class="footer-rightSection">
-        <p class="footer-title">Siguenos</p>
+        <p class="footer-title">Follow me!</p>
         <div class="footer-icons">
           <a href="https://www.linkedin.com/in/nelson-mosquera-2414aa170/"
             ><i class="fab fa-linkedin-in fa-lg"></i
@@ -40,7 +40,7 @@
       </div>
     </div>
     <p class="footer-copyRight">
-      2020 Personal web page by
+      2020 <br />Personal web page by
       <a class="footer-copyRightLink" href="https://github.com/monotera"
         >Nelson Mosquera</a
       >
