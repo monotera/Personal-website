@@ -27,13 +27,21 @@
       <div class="footer-rightSection">
         <p class="footer-title">Follow me!</p>
         <div class="footer-icons">
-          <a href="https://www.linkedin.com/in/nelson-mosquera-2414aa170/"
+          <a
+            :class="[dark_mode ? 'dark-mode' : 'light-mode']"
+            href="https://www.linkedin.com/in/nelson-mosquera-2414aa170/"
             ><i class="fab fa-linkedin-in fa-lg"></i
           ></a>
-          <a href="https://www.instagram.com/monotera_/">
+          <a
+            :class="[dark_mode ? 'dark-mode' : 'light-mode']"
+            href="https://www.instagram.com/monotera_/"
+          >
             <i class="fab fa-instagram fa-lg"></i>
           </a>
-          <a href="https://github.com/monotera">
+          <a
+            :class="[dark_mode ? 'dark-mode' : 'light-mode']"
+            href="https://github.com/monotera"
+          >
             <i class="fab fa-github fa-lg"></i>
           </a>
         </div>
@@ -48,7 +56,13 @@
   </footer>
 </template>
 <script>
-export default {};
+export default {
+  computed: {
+    dark_mode: function () {
+      return this.$store.getters.getDark_mode;
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 * {
@@ -133,8 +147,15 @@ footer {
     @media screen and (min-width: $breakpoint-desktopLarge) {
       font-size: 1vw;
     }
+  }
+  .light-mode {
     &:hover {
       color: $main-links-color;
+    }
+  }
+  .dark-mode {
+    &:hover {
+      color: $main-links-dark-color;
     }
   }
 }
