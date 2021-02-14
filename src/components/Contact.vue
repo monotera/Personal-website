@@ -168,11 +168,12 @@ export default {
 }
 .light-mode-contactbtn {
   background-color: $main-btn-color;
-  border: 3px solid $page-main-color;
+  border: 3px solid black;
   color: $main-font-color;
   &:hover {
     background-color: $page-main-color;
     color: $main-btn-color;
+    border: 3px solid lightseagreen;
   }
 }
 .dark-mode-contactBtn {
@@ -182,6 +183,7 @@ export default {
   &:hover {
     background-color: $main-btn-border-color;
     color: $main-btn-color-dark;
+    border: 3px solid orange;
   }
 }
 .light-mode-contactLine {
